@@ -28,8 +28,6 @@ Version 2.0.0 is much more stable and performs better. It uses Harmony to interv
 | **Compatibility** | Potential conflicts | **Native** (Isolated group) |
 | **Reliability** | May miss stars depending on timing | **Captures 100%** via m_gui |
 
-*Version 1.0.0 allowed me to learn some of the basics of modding, it will be the "plan B" in case of problems.*
-
 ## About myself
 
 *This is my first mod for Valheim, maybe I did something wrong.*
