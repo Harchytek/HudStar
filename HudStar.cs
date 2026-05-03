@@ -9,12 +9,17 @@ using System.Collections.Generic;
 
 namespace HudStarHarchytek
 {
-    [BepInPlugin("harchytek.hudstar", "HudStar", "2.1.0")]
+    [BepInPlugin("harchytek.hudstar", "HudStar", "2.2.0")]
     public class HudStar : BaseUnityPlugin
     {
         public static ConfigEntry<float> OffsetX;
         public static ConfigEntry<float> OffsetY;
         public static ConfigEntry<float> Scale;
+
+        private static readonly HashSet<string> BossBlacklist = new HashSet<string>
+        {
+            "Eikthyr", "gd_king", "Bonemass", "Dragon", "GoblinKing", "Queen", "SeekerQueen", "Fader"
+        };
 
         private void Awake()
         {
@@ -37,6 +42,13 @@ namespace HudStarHarchytek
                 foreach (DictionaryEntry entry in hudsField)
                 {
                     object hudData = entry.Value;
+
+                    Character character = Traverse.Create(hudData).Field("m_character").GetValue<Character>();
+                    if (character != null)
+                    {
+                        string prefabName = character.gameObject.name.Replace("(Clone)", "").Trim();
+                        if (BossBlacklist.Contains(prefabName)) continue;
+                    }
 
                     GameObject m_gui = Traverse.Create(hudData).Field("m_gui").GetValue<GameObject>();
                     if (m_gui == null || !m_gui.activeInHierarchy) continue;
@@ -90,7 +102,7 @@ namespace HudStarHarchytek
         {
             private RectTransform rt;
             void Awake() { rt = GetComponent<RectTransform>(); }
-
+            
             void LateUpdate()
             {
                 if (rt == null || !gameObject.activeInHierarchy) return;
