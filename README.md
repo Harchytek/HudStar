@@ -30,8 +30,6 @@ Version 2.0.0 is much more stable and performs better. It uses Harmony to interv
 
 ## About myself
 
-*This is my first mod for Valheim, maybe I did something wrong.*
-
-So if you have any advice, I'm open to suggestions. Ping me on the Valheim modding Discord.
+If you have any suggestions or need help, you can contact me on Discord.
 
 `Discord:` Harchytek#5056
