@@ -1,13 +1,24 @@
 # HudStar
 
-**Valheim** mod that allows you to reposition and scale the enemy stars on the HUD.
+Enemy Hud vanilla and resize the stars.
 
-![HudStar](https://imgur.com/CqUuyNP.png)
+<p align="left"><img src="https://i.imgur.com/MRakmlb.png" alt="HudStar" width="600"></p>
 
 ## Features
-* **Custom Position**: Move stars (X, Y) to fit your UI.
-* **Scaling**: Make stars larger or smaller.
-* **Performance**: Lightweight script that only updates when necessary.
+
+  * **Custom Position**: Move stars (X, Y) to fit your UI.
+  * **Scaling**: Make stars larger or smaller.
+  * **Performance**: Lightweight script that only updates when necessary.
+
+## Why this mod ? 
+
+This mod was created to correct the problem of stars remaining in their vanilla position with the [CLLC](https://thunderstore.io/c/valheim/p/Smoothbrain/CreatureLevelAndLootControl/) and [Enhudlement](https://thunderstore.io/c/valheim/p/ComfyMods/Enhuddlement/) mods.
+
+![Issue](https://imgur.com/ANnSlPG.png)
+
+With the star movement of the **HudStar** mods.
+
+![Fix](https://imgur.com/a4EqtWf.png)
 
 ## Installation
 1. Install [BepInExPack Valheim](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/).
@@ -15,21 +26,24 @@
 3. Launch the game once to generate the config file.
 
 ## Configuration
-Edit the config file at `BepInEx/config/harchytek.hudstar.cfg` to adjust offsets and scale.
 
-## Version comparison
+Use a [Configuration Manager](https://thunderstore.io/c/valheim/p/Azumatt/Azus_UnOfficial_ConfigManager/) to
+modify settings in-game.
 
-Version 2.0.0 is much more stable and performs better. It uses Harmony to intervene only when necessary, whereas version 1.0.0 constantly scanned the game.
+![Hud](https://imgur.com/4oC8iHV.png)
 
-| Version | v1.0.0 (Scan) | v2.0.0 (Harmony) |
-| :--- | :--- | :--- |
-| **CPU Impact** | Medium (Regular hierarchy scans) | **Very Low** (Event-based) |
-| **RAM Usage** | Temporary object creation | **Static & Optimized** |
-| **Compatibility** | Potential conflicts | **Native** (Isolated group) |
-| **Reliability** | May miss stars depending on timing | **Captures 100%** via m_gui |
+## Compatibility
+
+*Special thanks to [Redseiko](https://thunderstore.io/c/valheim/p/ComfyMods/) for the Enhuddlement 1.5.0 patch.*
+
+  * Vanilla
+  * Enhuddlement
+  * Creature Level And Loot Control
 
 ## About myself
 
 If you have any suggestions or need help, you can contact me on Github.
 
 I make these mods for my friends and me, but they can be useful to everyone. It's my way of contributing to the Valheim community.
+
+<p align="left"><img src="https://raw.githubusercontent.com/Harchytek/HudStar/main/docs/images/github.png" alt="Github" width="70" align="absmiddle">&nbsp;<strong><a href="https://github.com/Harchytek?tab=repositories">Harchytek</a></strong></p>
