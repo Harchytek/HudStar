@@ -2,7 +2,7 @@
 
 Enemy Hud vanilla and resize the stars.
 
-<p align="left"><img src="https://imgur.com/NuWe3xQ.png" alt="HudStar" width="600"></p>
+<p align="left"><img src="https://imgur.com/NuWe3xQ.png" alt="HudStar" width="510"></p>
 
 ## Features
 
